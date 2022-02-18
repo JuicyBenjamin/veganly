@@ -20,7 +20,7 @@ const formatering = (kategori) => {
     const klon = template.cloneNode(true);
     klon.querySelector("h2").textContent = kategori.navn;
     klon.querySelector(".beskrivelse").textContent = kategori.beskrivelse;
-    klon.querySelector(".billede").src = `./milleh_img/${kategori.billede}`;
+    klon.querySelector(".billede").src = `./img/${kategori.billede}`;
     main.appendChild(klon);
   });
   console.log(kategori);
