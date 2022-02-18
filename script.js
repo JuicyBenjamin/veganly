@@ -21,6 +21,7 @@ const formatering = (kategori) => {
     klon.querySelector("h2").textContent = kategori.navn;
     klon.querySelector(".beskrivelse").textContent = kategori.beskrivelse;
     klon.querySelector(".billede").src = `./img/${kategori.billede}`;
+    klon.querySelector(".billede").alt = kategori.alttag;
     main.appendChild(klon);
   });
   console.log(kategori);
