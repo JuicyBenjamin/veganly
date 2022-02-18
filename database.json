@@ -18,14 +18,14 @@
         "Hvidløg",
         "Rød pebber"
       ],
-      "fremgangsmåde": {
-        "1)": "Sæt vand i kog",
-        "2)": "Hak løg, hvidløg og rød pebber",
-        "3)": "Hæld hakkede tomater og tomat puré i gryde og varm op",
-        "4)": "Nu hvor vandet koger, tilsæt da spaghetti og en smule olie",
-        "5": "Nu hvor sovsen er varmet op, tilsæt da løg, hvidløg, rød pebber samt naturli hakket",
-        "6": "Nyd et meget middelmådigt måltid"
-      }
+      "fremgangsmåde": [
+        "Sæt vand i kog",
+        "Hak løg, hvidløg og rød pebber",
+        "Hæld hakkede tomater og tomat puré i gryde og varm op",
+        "Nu hvor vandet koger, tilsæt da spaghetti og en smule olie",
+        "Nu hvor sovsen er varmet op, tilsæt da løg, hvidløg, rød pebber samt naturli hakket",
+        "Nyd et meget middelmådigt måltid"
+      ]
     }
   ]
 }
