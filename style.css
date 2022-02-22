@@ -124,6 +124,7 @@ section {
     aspect-ratio: 16/5;
   }
   #opskrift section {
+    margin-top: 5%;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
