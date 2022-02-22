@@ -29,8 +29,16 @@
     <main id="opskrift">
       <article>
         <img src="" alt="" class="billede" />
-        <h2 class="navn"></h2>
+        <h1 class="navn"></h2>
         <p class="beskrivelse"></p>
+        <div class="ingredienser">
+          <h2>Ingredienser</h2>
+          <ol></ol>
+        </div>
+        <div class="fremgang">
+          <h2>Fremgangsmåde</h2>
+          <ol></ol>
+        </div>
       </article>
     </main>
 
@@ -58,10 +66,25 @@
       }
 
       function visMad() {
-        document.querySelector("h2").textContent = mad.navn;
+        const fremgangsDiv = document.querySelector(".fremgang ol");
+        const ingredienserDiv = document.querySelector(".ingredienser ol");
+
+        document.querySelector("h1").textContent = mad.navn;
         document.querySelector(".beskrivelse").textContent = mad.beskrivelse;
         document.querySelector(".billede").src = `./img/${mad.billede}`;
         document.querySelector(".billede").alt = mad.alttag;
+
+        mad.fremgang.forEach((element) => {
+          const fremgang = document.createElement("li");
+          fremgang.textContent = element;
+          fremgangsDiv.appendChild(fremgang);
+        });
+
+        mad.ingredienser.forEach((element) => {
+          const ingredienser = document.createElement("li");
+          ingredienser.textContent = element;
+          ingredienserDiv.appendChild(ingredienser);
+        });
       }
     </script>
   </body>
