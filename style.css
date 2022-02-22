@@ -145,6 +145,7 @@ button {
   display: inline-block;
   font-family: "Bebas Neue", cursive;
   font-size: 1.2rem;
+  border: none;
 }
 
 button:hover {
