@@ -66,6 +66,7 @@ ul {
   list-style-type: none;
   display: flex;
   justify-content: space-around;
+  gap: 20px;
   align-items: flex-end;
   padding: 1.2%;
 }
