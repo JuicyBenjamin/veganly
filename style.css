@@ -1,4 +1,13 @@
-img {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: rgb(240, 240, 240);
+}
+article img {
   width: 100%;
   aspect-ratio: 16/9;
   border-radius: 10px;
@@ -22,4 +31,32 @@ article {
 footer {
   display: flex;
   justify-content: center;
+}
+
+#menu img {
+  width: 20%;
+  border-radius: none;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 1.2%;
+}
+
+a {
+  color: #6c9c2d;
+  text-decoration: none;
+  font-family: "Bebas Neue", cursive;
+  font-size: 3.5rem;
+}
+
+a:visited {
+  color: #6c9c2d;
+}
+
+a:hover {
+  text-decoration: underline;
 }
