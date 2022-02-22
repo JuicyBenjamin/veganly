@@ -10,7 +10,7 @@
 // let kategorier;
 // let filter = "alle";
 
-// start = () => {
+// const start = () => {
 //   const filterKnapper = document.querySelectorAll("nav button");
 //   filterKnapper.forEach((knap) =>
 //     knap.addEventListener("click", filtrerKategorier)
@@ -89,7 +89,7 @@ async function loadJSON() {
 
 //vismad funktionen gør brug af to konstanter, hvor den ene tager fat i main og den anden tager fat i template, som vi bruger til at clone.
 //Deruodver så filtrerer den også, så hvis vores variabel filter = en kategori skal den vise den kategori og ellers skal den vise alle.
-//Vi har konstanten klon, som der sørger for der bliver klonet. 
+//Vi har konstanten klon, som der sørger for der bliver klonet.
 function visMad() {
   const main = document.querySelector("main");
   const template = document.querySelector("template").content;
