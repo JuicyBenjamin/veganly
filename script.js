@@ -13,7 +13,7 @@ let filter = "alle";
 
 //Funktionen start hiver fat i nav + button, hvorefter der bliver tilføjet et click event på dem alle. Samt bliver funktionen LOADjson kaldt.
 function start() {
-  const filterKnapper = document.querySelectorAll("nav button");
+  const filterKnapper = document.querySelectorAll("div button");
   filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerMad));
   loadJSON();
 }
