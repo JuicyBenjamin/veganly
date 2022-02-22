@@ -34,7 +34,7 @@
         <section>
           <div class="ingredienser">
             <h2>Ingredienser</h2>
-            <ol></ol>
+            <ul></ul>
           </div>
           <div class="fremgang">
             <h2>Fremgangsmåde</h2>
@@ -69,7 +69,7 @@
 
       function visMad() {
         const fremgangsDiv = document.querySelector(".fremgang ol");
-        const ingredienserDiv = document.querySelector(".ingredienser ol");
+        const ingredienserDiv = document.querySelector(".ingredienser ul");
 
         document.querySelector("h1").textContent = mad.navn;
         document.querySelector(".beskrivelse").textContent = mad.beskrivelse;

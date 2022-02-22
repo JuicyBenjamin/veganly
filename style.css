@@ -36,7 +36,8 @@ main {
   justify-content: center;
 }
 
-#opskrift ol {
+#opskrift ol,
+ul {
   display: flex;
   margin: 20px;
   flex-direction: column;
@@ -62,13 +63,17 @@ footer {
   border-radius: none;
 }
 
-ul {
+#menu {
   list-style-type: none;
   display: flex;
   justify-content: space-around;
   gap: 20px;
   align-items: flex-end;
   padding: 1.2%;
+  margin: 20px;
+  flex-direction: row;
+  font-family: "Montserrat", sans-serif;
+  list-style-position: inside;
 }
 
 a {
