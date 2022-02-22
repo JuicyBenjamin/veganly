@@ -49,12 +49,14 @@ function visMad() {
       klon.querySelector(".beskrivelse").textContent = kategorier.beskrivelse;
       klon.querySelector(".billede").src = `./img/${kategorier.billede}`;
       klon.querySelector(".billede").alt = kategorier.alttag;
-      klon.querySelector("article").addEventListener("click", visOpskrift);
+      klon
+        .querySelector("article")
+        .addEventListener("click", visOpskrift(kategorier));
       main.appendChild(klon);
     }
   });
 }
 
-const visOpskrift = () => {
-  console.log("Burde vise by opskrift");
+const visOpskrift = (opskrift) => {
+  console.log(opskrift);
 };
