@@ -169,3 +169,8 @@ button:hover {
 .pointer {
   cursor: pointer;
 }
+
+.ingredienser {
+  background-color: rgb(228, 227, 227);
+  border-radius: 10px;
+}
