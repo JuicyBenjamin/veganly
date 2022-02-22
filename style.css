@@ -31,15 +31,15 @@ main {
 }
 
 #opskrift article {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #opskrift ol {
   display: flex;
   margin: 20px;
   flex-direction: column;
-  text-align: center;
   font-family: "Montserrat", sans-serif;
   list-style-position: inside;
   gap: 20px;
@@ -93,8 +93,8 @@ a:hover {
 }
 
 p {
-  text-align: center;
   font-family: "Montserrat", sans-serif;
+  padding: 20px;
 }
 
 h1 {
@@ -102,16 +102,28 @@ h1 {
   text-decoration: none;
   font-family: "Bebas Neue", cursive;
   font-size: 3rem;
+  padding: 20px;
 }
 h2 {
   color: #6c9c2d;
   text-decoration: none;
   font-family: "Bebas Neue", cursive;
   font-size: 2rem;
+  padding: 20px;
 }
 
 section {
   display: grid;
   gap: 30px;
   margin-top: 10%;
+}
+
+@media (min-width: 768px) {
+  #opskrift img {
+    aspect-ratio: 16/5;
+  }
+  #opskrift section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
