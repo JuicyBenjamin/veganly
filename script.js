@@ -51,12 +51,13 @@ function visMad() {
       klon.querySelector(".billede").alt = kategorier.alttag;
       klon
         .querySelector("article")
-        .addEventListener("click", visOpskrift(kategorier));
+        .addEventListener("click", () => visOpskrift(kategorier));
       main.appendChild(klon);
     }
   });
 }
 
 const visOpskrift = (opskrift) => {
-  console.log(opskrift);
+  console.log(`Dette er den opskrift der blev klikket på ${opskrift.id}`);
+  location.href = `opskrift.html?id=${opskrift._id}`;
 };

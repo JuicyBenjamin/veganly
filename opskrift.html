@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Opskrift</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <img src="" alt="" class="billede" />
+      <h2 class="navn"></h2>
+      <p class="beskrivelse"></p>
+    </main>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get("id");
+
+      const url = "https://veganly-e90c.restdb.io/rest/kategorier";
+      const myHeaders = {
+        "x-apikey": "620f772134fd6215658587bc",
+      };
+
+      //Vi starter ud med, at alt DOMcontent skal være loaded ved visning af siden
+      document.addEventListener("DOMContentLoaded", loadJSON);
+      let mad;
+      let filter = "alle";
+
+      async function loadJSON() {
+        const JSONData = await fetch(`${url}/${id}`, {
+          headers: myHeaders,
+        });
+        mad = await JSONData.json();
+        console.log("Kategori", mad);
+        visMad();
+      }
+
+      function visMad() {
+        document.querySelector("h2").textContent = mad.navn;
+        document.querySelector(".beskrivelse").textContent = mad.beskrivelse;
+        document.querySelector(".billede").src = `./img/${mad.billede}`;
+        document.querySelector(".billede").alt = mad.alttag;
+      }
+    </script>
+  </body>
 </html>
