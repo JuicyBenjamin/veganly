@@ -68,6 +68,17 @@ a:hover {
 #splash {
   width: 1200px;
   background-image: url(img/splashbillede.jpg);
-  height: 600px;
+  height: 550px;
   background-size: 100% 100%;
+}
+
+p {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+section {
+  display: grid;
+  gap: 30px;
+  margin-top: 10%;
 }
