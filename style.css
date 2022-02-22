@@ -152,3 +152,8 @@ button:hover {
   color: white;
   cursor: pointer;
 }
+
+.valgt {
+  background-color: #6c9c2d;
+  color: white;
+}

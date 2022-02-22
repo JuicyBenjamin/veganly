@@ -21,7 +21,8 @@ function start() {
 //Funktionen filtrerMad er vores filter, som der tager fat i dataset fra HTML samt kategori fra vores database.
 function filtrerMad() {
   filter = this.dataset.kategori;
-
+  document.querySelector(".valgt").classList.remove("valgt");
+  this.classList.add("valgt");
   visMad();
 }
 
