@@ -7,18 +7,29 @@
     <title>Veganly</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
+    <script src="menu.js" defer></script>
   </head>
   <body>
     <header>
-      <ul id="menu">
-        <li>
-          <a href="forside.html"
-            ><img src="img/logo.png" alt="logo" class="nav-logo" /></a
-          ><a href="forside.html">Veganly</a>
-        </li>
-        <li><a href="opskrifter.html">Opskrifter</a></li>
-        <li><a href="omos.html">Om</a></li>
-      </ul>
+      <button class="toggle-btn">
+        <img class="icon close" src="img/luk.png" alt="" />
+        <img class="icon burger" src="img/burger.png" alt="" />
+      </button>
+      <nav>
+        <ul id="menu">
+          <li>
+            <a href="forside.html"
+              ><img
+                src="img/logo.png"
+                alt="logo"
+                class="nav-logo"
+                id="forsvind" /></a
+            ><a href="forside.html">Veganly</a>
+          </li>
+          <li><a href="opskrifter.html">Opskrifter</a></li>
+          <li><a href="omos.html">Om</a></li>
+        </ul>
+      </nav>
     </header>
     <div id="knapper">
       <button data-kategori="alle" class="valgt">Alle Opskrifter</button>
