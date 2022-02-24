@@ -47,7 +47,13 @@ function visMad() {
     if (filter == kategorier.kategori || filter == "alle") {
       const klon = template.cloneNode(true);
       klon.querySelector("h2").textContent = kategorier.navn;
-      klon.querySelector(".beskrivelse").textContent = kategorier.beskrivelse;
+      if (kategorier.beskrivelse.length > 90) {
+        klon.querySelector(".beskrivelse").textContent =
+          kategorier.beskrivelse.slice(0, 90) + "...";
+      } else {
+        klon.querySelector(".beskrivelse").textContent = kategorier.beskrivelse;
+      }
+
       klon.querySelector(".billede").src = `./img/${kategorier.billede}`;
       klon.querySelector(".billede").alt = kategorier.alttag;
       klon
