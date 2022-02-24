@@ -203,6 +203,12 @@ button:hover {
 }
 
 @media (max-width: 600px) {
+  #knapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10%;
+    margin-left: 20%;
+  }
   .toggle-btn {
     background: transparent;
     border: none;
