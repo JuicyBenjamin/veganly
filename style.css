@@ -126,6 +126,18 @@ section {
   margin-top: 10%;
 }
 
+footer {
+  background-color: #6c9c2d;
+  margin-top: 80px;
+  padding: 20px;
+  height: 200px;
+  display: flex;
+  color: rgb(240, 240, 240);
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+  align-items: center;
+}
+
 @media (min-width: 768px) {
   #opskrift img {
     aspect-ratio: 16/5;
