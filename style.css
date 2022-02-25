@@ -286,7 +286,7 @@ button:hover {
   width: 100%;
   background-image: url(img/splashbillede.jpg);
   height: 550px;
-  background-size: 100% 50%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   margin: 0 auto;
 }
