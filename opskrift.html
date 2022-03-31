@@ -8,10 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
     <script src="menu.js" defer></script>
   </head>
   <body>
@@ -23,13 +20,7 @@
       <nav>
         <ul id="menu">
           <li>
-            <a href="forside.html"
-              ><img
-                src="img/logo.png"
-                alt="logo"
-                class="nav-logo"
-                id="forsvind" /></a
-            ><a href="forside.html">Veganly</a>
+            <a href="index.html"><img src="img/logo.png" alt="logo" class="nav-logo" id="forsvind" /></a><a href="forside.html">Veganly</a>
           </li>
           <li><a href="opskrifter.html">Opskrifter</a></li>
           <li><a href="omos.html">Om</a></li>
@@ -56,48 +47,48 @@
     </main>
 
     <script>
-      const urlParams = new URLSearchParams(window.location.search);
-      const id = urlParams.get("id");
+      const urlParams = new URLSearchParams(window.location.search)
+      const id = urlParams.get('id')
 
-      const url = "https://veganly-e90c.restdb.io/rest/kategorier";
+      const url = 'https://veganly-e90c.restdb.io/rest/kategorier'
       const myHeaders = {
-        "x-apikey": "620f772134fd6215658587bc",
-      };
+        'x-apikey': '620f772134fd6215658587bc',
+      }
 
       //Vi starter ud med, at alt DOMcontent skal være loaded ved visning af siden
-      document.addEventListener("DOMContentLoaded", loadJSON);
-      let mad;
-      let filter = "alle";
+      document.addEventListener('DOMContentLoaded', loadJSON)
+      let mad
+      let filter = 'alle'
 
       async function loadJSON() {
         const JSONData = await fetch(`${url}/${id}`, {
           headers: myHeaders,
-        });
-        mad = await JSONData.json();
-        console.log("Kategori", mad);
-        visMad();
+        })
+        mad = await JSONData.json()
+        console.log('Kategori', mad)
+        visMad()
       }
 
       function visMad() {
-        const fremgangsDiv = document.querySelector(".fremgang ol");
-        const ingredienserDiv = document.querySelector(".ingredienser ul");
+        const fremgangsDiv = document.querySelector('.fremgang ol')
+        const ingredienserDiv = document.querySelector('.ingredienser ul')
 
-        document.querySelector("h1").textContent = mad.navn;
-        document.querySelector(".beskrivelse").textContent = mad.beskrivelse;
-        document.querySelector(".billede").src = `./img/${mad.billede}`;
-        document.querySelector(".billede").alt = mad.alttag;
+        document.querySelector('h1').textContent = mad.navn
+        document.querySelector('.beskrivelse').textContent = mad.beskrivelse
+        document.querySelector('.billede').src = `./img/${mad.billede}`
+        document.querySelector('.billede').alt = mad.alttag
 
         mad.fremgang.forEach((element) => {
-          const fremgang = document.createElement("li");
-          fremgang.textContent = element;
-          fremgangsDiv.appendChild(fremgang);
-        });
+          const fremgang = document.createElement('li')
+          fremgang.textContent = element
+          fremgangsDiv.appendChild(fremgang)
+        })
 
         mad.ingredienser.forEach((element) => {
-          const ingredienser = document.createElement("li");
-          ingredienser.textContent = element;
-          ingredienserDiv.appendChild(ingredienser);
-        });
+          const ingredienser = document.createElement('li')
+          ingredienser.textContent = element
+          ingredienserDiv.appendChild(ingredienser)
+        })
       }
     </script>
   </body>
